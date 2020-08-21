@@ -2,5 +2,8 @@
 
 if [[ ! -d '/var/lib/pgsql/9.6/data/' ]]; then
     /usr/pgsql-9.6/bin/postgresql96-setup initdb
+    /usr/sbin/e-smith/config setprop postgresql-9.6 status enabled
 fi
+
+/usr/bin/systemctl enabled postgresql-9.6
 /usr/bin/systemctl restart postgresql-9.6

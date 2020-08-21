@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+if [[ ! -f '/opt/wapt/conf/waptserver.ini' ]]; then
+    /opt/wapt/waptserver/scripts/postconf.sh  --quiet  --force-https --nginx
+    /usr/sbin/e-smith/config setprop waptserver status enabled
+fi

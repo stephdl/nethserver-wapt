@@ -8,10 +8,12 @@ Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-#BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
-Requires: wapt >= 1.8.0, wapt < 1.9.0
-Requires: msktutil nginx-mod-http-auth-spnego
-Requires: nethserver-postgresql
+Requires: tis-waptserver >= 1.8.0, tis-waptserver < 1.9.0
+Requires: tis-waptsetup >= 1.8.0, tis-waptsetup < 1.9.0
+Requires: postgresql96-server postgresql96-contrib
+Requires: cabextract
+Requires: msktutil
+Requires: nginx-mod-http-auth-spnego
 BuildRequires: nethserver-devtools
 BuildArch: noarch
 Conflicts: nethserver-nginx

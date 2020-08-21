@@ -1,9 +1,11 @@
 #!/usr/bin/bash
 
-if [[ /usr/bin/systemctl is-active --quiet waptserver ]]; then
+waptserver=$(/usr/bin/systemctl is-active waptserver)
+if [[ $waptserver == 'active' ]]; then
     /usr/bin/systemctl restart waptserver
 fi
 
-if [[ /usr/bin/systemctl is-active --quiet wapttasks ]]; then
+wapttasks=$(/usr/bin/systemctl is-active wapttasks)
+if [[ $wapttasks == 'active' ]]; then
     /usr/bin/systemctl restart wapttasks
 fi

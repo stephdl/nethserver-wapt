@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+if [[ /usr/bin/systemctl is-active --quiet waptserver ]]; then
+    /usr/bin/systemctl restart waptserver
+fi
+
+if [[ /usr/bin/systemctl is-active --quiet wapttasks ]]; then
+    /usr/bin/systemctl restart wapttasks
+fi

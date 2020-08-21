@@ -8,7 +8,8 @@ event_actions ( $event, 'initialize-default-databases' => '00');
 
 event_actions($event, qw(
              nethserver-wapt-stop-httpd 01
-             nethserver-wapt-postgresql-init 10
+             nethserver-wapt-postgresql-init 91
+             nethserver-wapt-restart-wapt-service  92
 ));
 
 event_templates($event, qw(
@@ -18,8 +19,6 @@ event_templates($event, qw(
 
 event_services($event, qw(
                nginx restart
-               waptserver restart
-               wapttasks restart
 ));
 
 

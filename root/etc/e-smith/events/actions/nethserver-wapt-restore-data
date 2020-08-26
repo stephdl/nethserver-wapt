@@ -5,5 +5,7 @@ if [[ -f '/var/lib/nethserver/wapt-backup/backup_wapt.sql' ]]; then
     /usr/bin/sudo -u postgres psql -c "drop database wapt"
     /usr/bin/sudo -u postgres psql < /var/lib/nethserver/wapt-backup/backup_wapt.sql
 
-    /usr/bin/wapt-scanpackages /var/www/wapt/
+    if [[ -d '/var/www/html/wapt' ]]; then
+        /usr/bin/wapt-scanpackages /var/www/html/wapt
+    fi
 fi

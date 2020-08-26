@@ -1,5 +1,6 @@
-/var/www/wapt/
-/var/www/wapt-host/
-/var/www/waptwua/
-/opt/wapt/conf/
-/opt/wapt/waptserver/ssl/
+/var/www/html/wapt
+/var/www/html/wapt-diff-repos
+/var/www/html/wapt-host
+/var/www/html/waptwua
+/opt/wapt/conf
+/opt/wapt/waptserver/ssl

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 waptserver=$(/usr/bin/systemctl is-active waptserver)
 if [[ $waptserver == 'active' ]]; then

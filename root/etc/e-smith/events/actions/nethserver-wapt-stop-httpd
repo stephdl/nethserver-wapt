@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 /usr/sbin/e-smith/config setprop httpd status disabled
 /usr/bin/systemctl disable httpd

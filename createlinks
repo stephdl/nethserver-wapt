@@ -33,3 +33,8 @@ event_templates('certificate-update', qw(
 event_services('certificate-update', qw(
                nginx reload
 ));
+
+# pre-backup-data
+event_actions('pre-backup-data', qw(
+                nethserver-wapt-dump-postgresql 10
+));

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/usr/bin/mkdir -p /var/lib/nethserver/wapt-backup/
+/usr/bin/sudo -u postgres pg_dumpall > /var/lib/nethserver/wapt-backup/backup_wapt.sql
+/usr/bin/chmod 640 /var/lib/nethserver/wapt-backup/backup_wapt.sql

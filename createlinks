@@ -38,3 +38,21 @@ event_services('certificate-update', qw(
 event_actions('pre-backup-data', qw(
                 nethserver-wapt-dump-postgresql 10
 ));
+
+#pre-restore-data
+event_services('pre-restore-data', qw(
+               nginx stop
+               wapttasks stop
+               waptserver stop
+));
+
+# post-restore-data
+event_actions('post-restore-data', qw(
+                nethserver-wapt-restore-data 10
+));
+
+event_services('post-restore-data', qw(
+               nginx start
+               wapttasks start
+               waptserver start
+));

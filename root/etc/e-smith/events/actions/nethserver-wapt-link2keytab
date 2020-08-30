@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# For kerberos authentication the default keytab must be readable by nginx
+#
+
+if [[ ! -e '/etc/nginx/http-krb5.keytab' && -f '/etc/krb5.keytab' ]]; then
+    /usr/bin/ln -s /etc/krb5.keytab /etc/nginx/http-krb5.keytab
+    /usr/bin/chown root:nginx /etc/nginx/http-krb5.keytab
+    /usr/bin/chmod 640 /etc/nginx/http-krb5.keytab
+fi

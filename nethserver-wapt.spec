@@ -1,7 +1,7 @@
 Summary: nethserver-wapt  is an helpdesk for IT assets
 %define name nethserver-wapt
 Name: %{name}
-%define version 0.0.1
+%define version 0.0.2
 %define release 1
 Version: %{version}
 Release: %{release}%{?dist}
@@ -48,5 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 
 %changelog
+* Thu Aug 05 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 0.0.2
+- Do not use the software-repo-save event
+￼
 * Fri Aug 21 2020 stephane de Labrusse <stephdl@de-labrusse.fr>
 - initial

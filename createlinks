@@ -8,7 +8,6 @@ event_actions ( $event, 'initialize-default-databases' => '00');
 
 event_actions($event, qw(
              nethserver-wapt-stop-httpd 01
-             nethserver-wapt-enablerepo   10
              nethserver-wapt-link2keytab  20
              nethserver-wapt-postgresql-init 91
              nethserver-wapt-restart-wapt-service  92
@@ -18,6 +17,7 @@ event_actions($event, qw(
 event_templates($event, qw(
                 /opt/wapt/waptserver/ssl/cert.pem
                 /opt/wapt/waptserver/ssl/key.pem
+                /etc/nethserver/eorepo.conf
 ));
 
 event_services($event, qw(
